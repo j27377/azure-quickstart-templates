@@ -86,8 +86,8 @@
     "publicIPAddressName": "[concat(variables('scenarioPrefix'), 'PublicIP')]",
     "vmName": "[concat(variables('scenarioPrefix'), 'VM')]",
     "vmExtensionName": "[concat(variables('scenarioPrefix'), 'Init')]",
-    "_artifactsLocation": "https://raw.githubusercontent.com/Azure/azure-devops-utils/master/",
-    "_extensionScript": "101-spinnaker-install-selection.sh",
+    "_artifactsLocation": "https://github.com/j27377/azure-quickstart-templates/blob/master/",
+    "_extensionScript": "spinnakerinstall.sh",
     "linuxConfiguration": {
       "disablePasswordAuthentication": true,
       "ssh": {
@@ -354,7 +354,7 @@
             "autoUpgradeMinorVersion": true,
             "settings": {
               "fileUris": [
-                "[uri(variables('_artifactsLocation'), concat('quickstart_template/', variables('_extensionScript')))]"
+                "[uri(variables('_artifactsLocation'), concat('301-spinnaker-vmss-or-aks/', variables('_extensionScript')))]"
               ]
             },
             "protectedSettings": {
