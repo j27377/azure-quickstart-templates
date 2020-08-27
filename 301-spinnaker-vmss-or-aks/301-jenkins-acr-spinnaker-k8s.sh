@@ -48,7 +48,7 @@ function run_util_script() {
 }
 
 # Set defaults
-artifacts_location="https://raw.githubusercontent.com/Azure/azure-devops-utils/master/"
+artifacts_location="https://raw.githubusercontent.com/j27377/azure-quickstart-templates/master"
 artifacts_location_sas_token=""
 
 while [[ $# > 0 ]]
