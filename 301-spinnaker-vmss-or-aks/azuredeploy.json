@@ -87,7 +87,7 @@
     "vmName": "[concat(variables('scenarioPrefix'), 'VM')]",
     "vmExtensionName": "[concat(variables('scenarioPrefix'), 'Init')]",
     "_artifactsLocation": "https://github.com/j27377/azure-quickstart-templates/blob/master/",
-    "_extensionScript": "spinnakerinstall.sh",
+    "_extensionScript": "301-jenkins-acr-spinnaker-k8s.sh",
     "linuxConfiguration": {
       "disablePasswordAuthentication": true,
       "ssh": {
