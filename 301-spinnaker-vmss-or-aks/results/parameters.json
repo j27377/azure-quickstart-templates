@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "sshPublicKey": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQk/R4WtFXhLFiuUitkrqxpMlbXAh+aC7phdyBmxy+QAUdCd0+HIXoH2WGtQeY6892frHLR528FeI+7JGccCl3YnCjCWmpO54wuCUZjhuX1MdOxim0TG5zpdFXo87Dhrtkli7/gVrE2rsThrMJDhUI+63WIezRfVIq2ALFtOipmfqaEC42j7Dfqb16qa6uQVBdCvcw/JdIX0PzTWgJDD2gpS6Vj5nZlZ6FUQCzW6RQ6nAbvHrdE95aIDxufQ3Ple04zP7ruHMfHj1F2yNhMaJxhHj263A/XRebbYEmDewLSOwrrDU8SvOsmhSoWX0o8TU6FvMnCwp/Q7dCeQzYuP57 root@devopsVMPaul2"
+    },
+    "devopsDnsPrefix": {
+      "value": "devops-paul2-2020-08-24"
+    },
+    "servicePrincipalAppId": {
+      "value": "7d81bdb0-40f0-4b16-9ad4-96332b5a10e3"
+    },
+    "servicePrincipalAppKey": {
+      "value": null
+    },
+    "gitRepository": {
+      "value": "https://github.com/j27377/spin-kub-demo"
+    },
+    "dockerRepository": {
+      "value": "tempdcocker"
+    },
+    "location": {
+      "value": "centralus"
+    }
+  }
+}
