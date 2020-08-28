@@ -270,7 +270,6 @@
                     "location": "[parameters('location')]",
                     "dependsOn": [
                         "[resourceId('Microsoft.Compute/virtualMachines', variables('vmName'))]",
-                        "[resourceId('Microsoft.ContainerRegistry/registries', variables('acrName'))]",
                         "[resourceId('Microsoft.ContainerService/containerServices', variables('kubernetesName'))]"
                     ],
                     "properties": {
