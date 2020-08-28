@@ -1,16 +1,7 @@
 # Continuous Deployment to Kubernetes [![Build Status](http://devops-ci.westcentralus.cloudapp.azure.com/job/qs/job/301-jenkins-acr-spinnaker-k8s/badge/icon)](http://devops-ci.westcentralus.cloudapp.azure.com/blue/organizations/jenkins/qs%2F301-jenkins-acr-spinnaker-k8s/activity)
 
-![Azure Public Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/301-jenkins-acr-spinnaker-k8s/PublicLastTestDate.svg)
-![Azure Public Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/301-jenkins-acr-spinnaker-k8s/PublicDeployment.svg)
-
-![Azure US Gov Last Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/301-jenkins-acr-spinnaker-k8s/FairfaxLastTestDate.svg)
-![Azure US Gov Last Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/301-jenkins-acr-spinnaker-k8s/FairfaxDeployment.svg)
-
-![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/301-jenkins-acr-spinnaker-k8s/BestPracticeResult.svg)
-![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/301-jenkins-acr-spinnaker-k8s/CredScanResult.svg)
-
-[![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fAzure%2fazure-quickstart-templates%2fmaster%2f301-jenkins-acr-spinnaker-k8s%2fazuredeploy.json)
-[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3a%2f%2fraw.githubusercontent.com%2fAzure%2fazure-quickstart-templates%2fmaster%2f301-jenkins-acr-spinnaker-k8s%2fazuredeploy.json)
+[![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https:%2f%2fraw.githubusercontent.com%2fj27377%2fazure-quickstart-templates%2fmaster%2f301-jenkins-acr-spinnaker-k8s%2fazuredeploy.json)
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https:%2f%2fraw.githubusercontent.com%2fj27377%2fazure-quickstart-templates%2fmaster%2f301-jenkins-acr-spinnaker-k8s%2fazuredeploy.json)
 
 This template allows you to deploy and configure a DevOps pipeline from an Azure Container Registry to a Kubernetes cluster. It deploys an instance of Jenkins on a Linux Ubuntu 14.04 LTS VM and an instance of Spinnaker on the same Kubernetes cluster that your pipeline will target.
 
