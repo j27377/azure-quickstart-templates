@@ -1,4 +1,4 @@
-# Continuous Deployment to Kubernetes [![Build Status](http://devops-ci.westcentralus.cloudapp.azure.com/job/qs/job/301-jenkins-acr-spinnaker-k8s/badge/icon)](http://devops-ci.westcentralus.cloudapp.azure.com/blue/organizations/jenkins/qs%2F301-jenkins-acr-spinnaker-k8s/activity)
+# Continuous Deployment to Kubernetes 
 
 [![Deploy to Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https:%2f%2fraw.githubusercontent.com%2fj27377%2fazure-quickstart-templates%2fmaster%2f301-jenkins-acr-spinnaker-k8s%2fazuredeploy.json)
 [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https:%2f%2fraw.githubusercontent.com%2fj27377%2fazure-quickstart-templates%2fmaster%2f301-jenkins-acr-spinnaker-k8s%2fazuredeploy.json)
