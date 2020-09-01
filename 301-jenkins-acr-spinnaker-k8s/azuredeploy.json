@@ -305,7 +305,7 @@
           "dependsOn": [
             "[resourceId('Microsoft.Compute/virtualMachines', variables('vmName'))]",
             "[resourceId('Microsoft.ContainerRegistry/registries', variables('acrName'))]",
-            "[resourceId('Microsoft.ContainerService/containerServices', variables('kubernetesName'))]"
+            "[resourceId('Microsoft.ContainerService/managedClusters', variables('kubernetesName'))]"
           ],
           "properties": {
             "publisher": "Microsoft.Azure.Extensions",
@@ -318,7 +318,7 @@
               ]
             },
             "protectedSettings": {
-              "commandToExecute": "[concat('./', variables('_extensionScript'), ' -ai \"', parameters('servicePrincipalAppId'), '\" -ak \"', parameters('servicePrincipalAppKey'), '\" -si \"', subscription().subscriptionId, '\" -ti \"', subscription().tenantId, '\" -un \"', parameters('adminUsername'), '\" -gr \"', parameters('gitRepository') , '\" -rg \"', resourceGroup().name, '\" -mf \"', reference(resourceId('Microsoft.ContainerService/containerServices', variables('kubernetesName'))).masterProfile.fqdn, '\" -san \"', variables('storageAccountName'), '\" -sak \"', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2016-01-01').keys[0].value, '\" -acr \"', reference(resourceId('Microsoft.ContainerRegistry/registries', variables('acrName'))).loginServer, '\" -dr \"', parameters('dockerRepository') , '\" -pp \"', variables('pipelinePort'),'\" -jf \"', reference(variables('publicIPAddressName')).dnsSettings.fqdn, '\" -al \"', variables('_artifactsLocation'), '\" -st \"', variables('_artifactsLocationSasToken'), '\"')]"
+              "commandToExecute": "[concat('./', variables('_extensionScript'), ' -ai \"', parameters('servicePrincipalAppId'), '\" -ak \"', parameters('servicePrincipalAppKey'), '\" -si \"', subscription().subscriptionId, '\" -ti \"', subscription().tenantId, '\" -un \"', parameters('adminUsername'), '\" -gr \"', parameters('gitRepository') , '\" -rg \"', resourceGroup().name, '\" -mf \"', reference(resourceId('Microsoft.ContainerService/managedClusters', variables('kubernetesName'))).masterProfile.fqdn, '\" -san \"', variables('storageAccountName'), '\" -sak \"', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2016-01-01').keys[0].value, '\" -acr \"', reference(resourceId('Microsoft.ContainerRegistry/registries', variables('acrName'))).loginServer, '\" -dr \"', parameters('dockerRepository') , '\" -pp \"', variables('pipelinePort'),'\" -jf \"', reference(variables('publicIPAddressName')).dnsSettings.fqdn, '\" -al \"', variables('_artifactsLocation'), '\" -st \"', variables('_artifactsLocationSasToken'), '\"')]"
             }
           }
         }
@@ -419,11 +419,11 @@
     },
     "kubernetesMasterFQDN": {
       "type": "String",
-      "value": "[reference(resourceId('Microsoft.ContainerService/containerServices', variables('kubernetesName'))).masterProfile.fqdn]"
+      "value": "[reference(resourceId('Microsoft.ContainerService/managedClusters', variables('kubernetesName'))).masterProfile.fqdn]"
     },
     "kubernetesMasterSsh": {
       "type": "String",
-      "value": "[concat('ssh ', parameters('adminUsername'), '@', reference(resourceId('Microsoft.ContainerService/containerServices', variables('kubernetesName'))).masterProfile.fqdn)]"
+      "value": "[concat('ssh ', parameters('adminUsername'), '@', reference(resourceId('Microsoft.ContainerService/managedClusters', variables('kubernetesName'))).masterProfile.fqdn)]"
     }
   }
 }
