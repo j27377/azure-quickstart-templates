@@ -37,6 +37,7 @@ function throw_if_empty() {
 
 function run_util_script() {
   local script_path="$1"
+  echo "about to call $script_path"
   shift
   curl --silent "${artifacts_location}${script_path}${artifacts_location_sas_token}" | sudo bash -s -- "$@"
   local return_value=$?
@@ -214,7 +215,7 @@ add_empty_image_to_acr
 install_kubectl
 
 install_az
-
+echo "\n\nlets go!! \n\n"
 run_util_script "spinnaker/install_halyard/install_halyard.sh" -san "$storage_account_name" -sak "$storage_account_key" -u "$user_name"
 
 # Copy kube config
