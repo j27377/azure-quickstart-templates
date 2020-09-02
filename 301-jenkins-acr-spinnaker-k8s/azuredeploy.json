@@ -66,7 +66,7 @@
     "nicName": "[concat(variables('resourcePrefix'), 'VMNic')]",
     "subnetName": "[concat(variables('resourcePrefix'), 'Subnet')]",
     "publicIPAddressName": "[concat(variables('resourcePrefix'), 'PublicIP')]",
-    "vmName": "[concat(variables('resourcePrefix'), 'VM')]",
+    "vmName": "[concat(variables('resourcePrefix'), 'VMDev')]",
     "virtualNetworkName": "[concat(variables('resourcePrefix'), 'VNET')]",
     "vmExtensionName": "[concat(variables('resourcePrefix'), 'Init')]",
     "frontEndNSGName": "[concat(variables('resourcePrefix'), 'NSG')]",
