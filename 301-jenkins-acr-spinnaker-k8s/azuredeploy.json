@@ -299,33 +299,7 @@
             }
           ]
         }
-      },
-      "resources": [
-        {
-          "type": "extensions",
-          "apiVersion": "2015-06-15",
-          "name": "[variables('vmExtensionName')]",
-          "location": "[parameters('location')]",
-          "dependsOn": [
-            "[resourceId('Microsoft.Compute/virtualMachines', variables('vmName'))]",
-            "[resourceId('Microsoft.ContainerRegistry/registries', variables('acrName'))]"
-          ],
-          "properties": {
-            "publisher": "Microsoft.Azure.Extensions",
-            "type": "CustomScript",
-            "typeHandlerVersion": "2.0",
-            "autoUpgradeMinorVersion": true,
-            "settings": {
-              "fileUris": [
-                "[concat(variables('_artifactsLocation'), variables('_extensionScript'), variables('_artifactsLocationSasToken'))]"
-              ]
-            },
-            "protectedSettings": {
-              "commandToExecute": "[concat('./', variables('_extensionScript'), ' -ai \"', parameters('servicePrincipalAppId'), '\" -ak \"', parameters('servicePrincipalAppKey'), '\" -si \"', subscription().subscriptionId, '\" -ti \"', subscription().tenantId, '\" -un \"', parameters('adminUsername'), '\" -gr \"', parameters('gitRepository') , '\" -rg \"', resourceGroup().name, '\" -san \"', variables('storageAccountName'), '\" -sak \"', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2016-01-01').keys[0].value, '\" -acr \"', reference(resourceId('Microsoft.ContainerRegistry/registries', variables('acrName'))).loginServer, '\" -dr \"', parameters('dockerRepository') , '\" -pp \"', variables('pipelinePort'),'\" -jf \"', reference(variables('publicIPAddressName')).dnsSettings.fqdn, '\" -al \"', variables('_artifactsLocation'), '\" -st \"', variables('_artifactsLocationSasToken'), '\"')]"
-            }
-          }
-        }
-      ]
+      }
     }
   ],
   "outputs": {
@@ -340,6 +314,42 @@
     "SSH": {
       "type": "String",
       "value": "[concat('ssh -L 8080:localhost:8080 -L 9000:localhost:9000 -L 8084:localhost:8084 -L 8001:localhost:8001 ', parameters('adminUsername'), '@', reference(variables('publicIPAddressName')).dnsSettings.fqdn)]"
+    },
+    "adminJenkinsPassword": {
+      "type": "String",
+      "value": "variables('adminJenkinsPassword')"
+    },
+    "keyVaultName": {
+      "type": "String",
+      "value": "variables('keyVaultName')"
+    },
+    "storageAccountName": {
+      "type": "String",
+      "value": "variables('storageAccountName')"
+    },
+    "useSshPublicKey": {
+      "type": "String",
+      "value": "variables('useSshPublicKey')"
+    },
+    "_artifactsLocation": {
+      "type": "String",
+      "value": "variables('_artifactsLocation')"
+    },
+    "resourceGroupName": {
+      "type": "String",
+      "value": "resourceGroup().name"
+    },
+    "valueForsak": {
+      "type": "String",
+      "value": "[concat(listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-04-01').keys[0].value]"
+    },
+    "valueForvf": {
+      "type": "String",
+      "value": "reference(variables('publicIPAddressName')).dnsSettings.fqdn"
+    },
+    "adminJenkinsPassword": {
+      "type": "String",
+      "value": "variables('adminJenkinsPassword')"
     },
     "azureContainerRegistryUrl": {
       "type": "String",
