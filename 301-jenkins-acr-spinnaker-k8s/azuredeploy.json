@@ -315,21 +315,9 @@
       "type": "String",
       "value": "[concat('ssh -L 8080:localhost:8080 -L 9000:localhost:9000 -L 8084:localhost:8084 -L 8001:localhost:8001 ', parameters('adminUsername'), '@', reference(variables('publicIPAddressName')).dnsSettings.fqdn)]"
     },
-    "adminJenkinsPassword": {
-      "type": "String",
-      "value": "[variables('adminJenkinsPassword')]"
-    },
-    "keyVaultName": {
-      "type": "String",
-      "value": "[variables('keyVaultName')]"
-    },
     "storageAccountName": {
       "type": "String",
       "value": "[variables('storageAccountName')]"
-    },
-    "useSshPublicKey": {
-      "type": "String",
-      "value": "[variables('useSshPublicKey')]"
     },
     "_artifactsLocation": {
       "type": "String",
