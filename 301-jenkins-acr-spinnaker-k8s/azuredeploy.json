@@ -335,10 +335,6 @@
       "type": "String",
       "value": "[variables('_artifactsLocation')]"
     },
-    "resourceGroupName": {
-      "type": "String",
-      "value": "[reference(variables('resourceGroup')).name]"
-    },
     "valueForsak": {
       "type": "String",
       "value": "[concat(listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-04-01').keys[0].value)]"
