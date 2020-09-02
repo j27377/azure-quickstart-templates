@@ -317,39 +317,31 @@
     },
     "adminJenkinsPassword": {
       "type": "String",
-      "value": "variables('adminJenkinsPassword')"
+      "value": "[variables('adminJenkinsPassword')]"
     },
     "keyVaultName": {
       "type": "String",
-      "value": "variables('keyVaultName')"
+      "value": "[variables('keyVaultName')]"
     },
     "storageAccountName": {
       "type": "String",
-      "value": "variables('storageAccountName')"
+      "value": "[variables('storageAccountName')]"
     },
     "useSshPublicKey": {
       "type": "String",
-      "value": "variables('useSshPublicKey')"
+      "value": "[variables('useSshPublicKey')]"
     },
     "_artifactsLocation": {
       "type": "String",
-      "value": "variables('_artifactsLocation')"
+      "value": "[variables('_artifactsLocation')]"
     },
     "resourceGroupName": {
       "type": "String",
-      "value": "resourceGroup().name"
+      "value": "[reference(variables('resourceGroup')).name]"
     },
     "valueForsak": {
       "type": "String",
       "value": "[concat(listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-04-01').keys[0].value)]"
-    },
-    "valueForvf": {
-      "type": "String",
-      "value": "reference(variables('publicIPAddressName')).dnsSettings.fqdn"
-    },
-    "adminJenkinsPassword": {
-      "type": "String",
-      "value": "variables('adminJenkinsPassword')"
     },
     "azureContainerRegistryUrl": {
       "type": "String",
