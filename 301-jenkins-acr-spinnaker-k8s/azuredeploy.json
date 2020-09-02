@@ -319,9 +319,29 @@
       "type": "String",
       "value": "[variables('storageAccountName')]"
     },
-    "_artifactsLocation": {
+    "artifactsLocation": {
       "type": "String",
       "value": "[variables('_artifactsLocation')]"
+    },
+    "artifactsLocationSasToken": {
+      "type": "String",
+      "value": "[variables('_artifactsLocationSasToken')]"
+    },
+    "valueForsak": {
+      "type": "String",
+      "value": "[concat(listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-04-01').keys[0].value)]"
+    },
+    "subscriptionId": {
+      "type": "String",
+      "value": "[subscription().subscriptionId]"
+    },
+    "tenantId": {
+      "type": "String",
+      "value": "[subscription().tenantId]"
+    },
+    "resourceGroupName": {
+      "type": "String",
+      "value": "[resourceGroup().name]"
     },
     "valueForsak": {
       "type": "String",
