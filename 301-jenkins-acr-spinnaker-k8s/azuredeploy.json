@@ -65,7 +65,7 @@
     "acrName": "[uniqueString(resourceGroup().id)]",
     "nicName": "[concat(variables('resourcePrefix'), 'VMNic')]",
     "subnetName": "[concat(variables('resourcePrefix'), 'Subnet')]",
-    "publicIPAddressName": "[concat(variables('resourcePrefix'), 'PublicIP')]",
+    "publicIPAddressName": "[concat(variables('resourcePrefix'), 'PublicIPDev')]",
     "vmName": "[concat(variables('resourcePrefix'), 'VMDev')]",
     "virtualNetworkName": "[concat(variables('resourcePrefix'), 'VNET')]",
     "vmExtensionName": "[concat(variables('resourcePrefix'), 'Init')]",
