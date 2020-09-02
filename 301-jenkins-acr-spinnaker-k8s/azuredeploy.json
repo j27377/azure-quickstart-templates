@@ -341,7 +341,7 @@
     },
     "valueForsak": {
       "type": "String",
-      "value": "[concat(listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-04-01').keys[0].value]"
+      "value": "[concat(listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-04-01').keys[0].value)]"
     },
     "valueForvf": {
       "type": "String",
